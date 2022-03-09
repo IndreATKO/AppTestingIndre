@@ -8,6 +8,7 @@ import android.widget.ArrayAdapter;
 import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.textcounterindre.utils.TextUtils;
 
@@ -33,17 +34,18 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void onBtnCalculateClick(View view) {
-        if (this.spDropDown.getSelectedItem().toString().equalsIgnoreCase("Words")) {
+        if(false){
+             if (this.spDropDown.getSelectedItem().toString().equalsIgnoreCase("Words")) {
 //to do
-        } else {
-            int charsCount = TextUtils.getCharsCount(this.txtMain.getText().toString());
-            String charsCountFormatted = String.valueOf(charsCount);
-            this.tvResult.setText(charsCountFormatted);
+            } else {
+                   int charsCount = TextUtils.getCharsCount(this.txtMain.getText().toString());
+                   String charsCountFormatted = String.valueOf(charsCount);
+                   this.tvResult.setText(charsCountFormatted);
 
-//            String content = this.txtMain.getText().toString()
-//            int charsCount = content.length();
-//            String charsCountFormatted = String.valueOf(charsCount);
-//            this.tvResult.setText(charsCountFormatted);
+             }
+        }
+        else {
+            Toast.makeText(this, "Text is empty", Toast.LENGTH_LONG).show();
         }
     }
 }
