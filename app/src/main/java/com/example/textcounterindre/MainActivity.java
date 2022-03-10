@@ -34,9 +34,14 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void onBtnCalculateClick(View view) {
-        if(false){
-             if (this.spDropDown.getSelectedItem().toString().equalsIgnoreCase("Words")) {
+        if(txtMain.getText().toString().isEmpty()) {
+            Toast.makeText(this, "Text is empty", Toast.LENGTH_LONG).show();
+            } else {
+                if (this.spDropDown.getSelectedItem().toString().equalsIgnoreCase("Words")) {
 //to do
+                    String text = txtMain.getText().toString();
+                    String[] textArray = text.split(" ");
+                    tvResult.setText("Words: " + textArray.length);
             } else {
                    int charsCount = TextUtils.getCharsCount(this.txtMain.getText().toString());
                    String charsCountFormatted = String.valueOf(charsCount);
@@ -44,8 +49,6 @@ public class MainActivity extends AppCompatActivity {
 
              }
         }
-        else {
-            Toast.makeText(this, "Text is empty", Toast.LENGTH_LONG).show();
-        }
     }
 }
+
