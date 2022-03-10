@@ -45,7 +45,7 @@ public class MainActivity extends AppCompatActivity {
             } else {
                    int charsCount = TextUtils.getCharsCount(this.txtMain.getText().toString());
                    String charsCountFormatted = String.valueOf(charsCount);
-                   this.tvResult.setText(charsCountFormatted);
+                   this.tvResult.setText("Chars: " + charsCountFormatted);
 
              }
         }
