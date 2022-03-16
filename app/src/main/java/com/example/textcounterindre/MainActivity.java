@@ -39,9 +39,15 @@ public class MainActivity extends AppCompatActivity {
             } else {
                 if (this.spDropDown.getSelectedItem().toString().equalsIgnoreCase("Words")) {
 //to do
-                    String text = txtMain.getText().toString();
-                    String[] textArray = text.split(" ");
-                    tvResult.setText("Words: " + textArray.length);
+                    int wordsCount = TextUtils.getWordsCount(this.txtMain.getText().toString());
+                    String wordsCountFormatted = String.valueOf(wordsCount);
+                    this.tvResult.setText("Words: " + wordsCountFormatted);
+
+                    // String wordsCountFormatted = String.valueOf(String.valueOf(wordsCount).split("\\s+").length);
+                    //String wordsCount = txtMain.getText().toString();
+                    //String[] wordsCountFormatted = wordsCount.split(" ");
+                   // tvResult.setText("Words: " + wordsCountFormatted.length);
+
             } else {
                    int charsCount = TextUtils.getCharsCount(this.txtMain.getText().toString());
                    String charsCountFormatted = String.valueOf(charsCount);

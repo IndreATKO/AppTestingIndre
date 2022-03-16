@@ -22,7 +22,7 @@
         android:layout_width="291dp"
         android:layout_height="127dp"
         android:ems="10"
-        android:hint="Iveskite teksta"
+        android:hint="Type text here"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
